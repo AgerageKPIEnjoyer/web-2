@@ -26,7 +26,7 @@ html, body {
   /* Візуально "малюємо" наш макет */
   grid-template-areas:
     "header header  header"
-    "left   center-top   right"
+    "left   center-top   center-top"
     "left   center-main  right"
     "left   center-bottom right"
     "footer footer  footer";
