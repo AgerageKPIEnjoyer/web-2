@@ -1,0 +1,102 @@
+:root {
+  --col-1: 250px;
+  --col-2: 700px;
+  --col-3: 250px;
+  
+  --row-1: 140px;   /* header */
+  --row-2: 80px;   /* після header */
+  --row-3: 300px;   /* середня зона */
+  --row-4: 100px;   /* перед footer */
+  --row-5: 140px;   /* footer */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #121212;
+  color: #f0f0f0;
+}
+
+.layout-table {
+  width: 100%;
+  min-height: 1100px;
+  border-collapse: collapse;
+  table-layout: fixed;   
+  height: 100%;
+
+}
+
+.layout-table col.col1 { width: var(--col-1); }
+.layout-table col.col2 { width: var(--col-2); }
+.layout-table col.col3 { width: var(--col-3); }
+
+.layout-table td {
+  border: 1px solid #333;
+  vertical-align: center;
+  padding: 10px;
+}
+
+.row1 td,
+.row5 td {
+  border: none;
+}
+
+/* Мінімальні висоти для кожного рядка */
+.row1 .block { min-height: var(--row-1); height: auto; }
+.row2 .block { min-height: var(--row-2); height: auto; }
+.row3 .block { min-height: var(--row-3); height: auto; }
+.row4 .block { min-height: var(--row-4); height: auto; }
+.row5 .block { min-height: var(--row-5); height: auto; }
+
+/* Усі блоки можуть рости, але не стиснутись нижче мінімуму */
+.block {
+  text-align: center;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+/* Блоки для прикладу */
+.block1, .block7  { background: #191d25; }
+.block2  { background: #222; }
+.block3  { background: #23272f; }
+.block4  { background: #121629; }
+.block5  { background: #040817; }
+.block6  { background: #0d042e; }
+.blockX { display:inline-block; padding: 0.5rem 1rem; background:#312f38; color:#fff; font-weight:bold; }
+.blockY { display:inline-block; padding: 0.5rem 1rem; background:#312f38; color:#fff; font-weight:bold; text-align:center;}
+
+.block4 img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.block p {
+  margin: 0;
+  padding: 0;
+  line-height: 2;  
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.block h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.block li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 200;
+}
+/* Списки */
+ul, ol { padding-left: 25px; text-align: left; }
+a { color: #216da0; text-decoration: none; }
+a:hover { text-decoration: underline; }

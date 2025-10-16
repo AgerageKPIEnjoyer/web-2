@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: #121212;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+.block {
+  padding: 15px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+
+
+/* 1. Головний контейнер: містить header, головну частину та footer*/
+.container {
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+}
+
+/* 2. Контейнер для основного контенту: вибудовує 3 колонки горизонтально */
+.main-content {
+  display: flex;
+  flex-grow: 1; /* Дозволяє цьому блоку зайняти весь вільний простір між хедером і футером */
+}
+
+/* 3. Центральна колонка: вибудовує свої блоки (3, 4, 6) ВЕРТИКАЛЬНО */
+.center-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%; /* Займає 50% ширини .main-content */
+}
+
+/* Хедер і Футер (100% ширини) */
+.block1, .block7 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #191d25;
+}
+
+/* Блок 2: Ліва колонка */
+.block2 {
+  flex-basis: 25%; /* Займає 25% ширини */
+  background: #222;
+}
+
+/* Блок 5: Права колонка */
+.block5 {
+  flex-basis: 25%; /* Займає 25% ширини */
+  background: #040817;
+}
+
+/* Блоки всередині центральної колонки */
+.block3 {
+  background: #23272f;
+  min-height: 10%;
+}
+.block4 {
+  background: #121629;
+  flex-grow: 1; /*Цей блок розтягується, щоб заповнити вільне місце в колонці */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.block6 {
+  background: #0d042e;
+  min-height: 10%;
+}
+
+.blockX, .blockY {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #312f38;
+  color: #fff;
+  font-weight: bold;
+}
+
+.block4 img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.block p {
+  line-height: 2;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.block h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.block li { 
+  margin-bottom: 10px; 
+  font-size: 18px; 
+  font-weight: 200; 
+}
+
+ul, ol { 
+  padding-left: 25px; 
+  text-align: left; 
+}
+
+a { 
+  color: #216da0; 
+  text-decoration: none; 
+}
+
+a:hover { 
+  text-decoration: underline; 
+}
