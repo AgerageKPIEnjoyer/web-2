@@ -15,27 +15,25 @@ html, body {
   overflow-wrap: anywhere;
   word-break: break-word;
 }
-
-
-
-/* 1. Головний контейнер: містить header, головну частину та footer*/
+/*Головний контейнер: містить header, головну частину та footer*/
 .container {
   display: flex;
   flex-direction: column; 
   min-height: 100vh;
 }
 
-/* 2. Контейнер для основного контенту: вибудовує 3 колонки горизонтально */
+/* Контейнер для основного контенту: вибудовує 3 колонки горизонтально */
 .main-content {
   display: flex;
   flex-grow: 1; /* Дозволяє цьому блоку зайняти весь вільний простір між хедером і футером */
 }
 
-/* 3. Центральна колонка: вибудовує свої блоки (3, 4, 6) ВЕРТИКАЛЬНО */
+/* Центральна колонка: вибудовує свої блоки (3, 4, 6) ВЕРТИКАЛЬНО */
 .center-column {
   display: flex;
   flex-direction: column;
-  flex-basis: 50%; /* Займає 50% ширини .main-content */
+  flex-basis: 700px; 
+  flex-grow: 1;
 }
 
 /* Хедер і Футер (100% ширини) */
@@ -49,13 +47,15 @@ html, body {
 
 /* Блок 2: Ліва колонка */
 .block2 {
-  flex-basis: 25%; /* Займає 25% ширини */
+  flex-basis: 250px;
+  flex-shrink: 0;
   background: #222;
 }
 
 /* Блок 5: Права колонка */
 .block5 {
-  flex-basis: 25%; /* Займає 25% ширини */
+  flex-basis: 250px;
+  flex-shrink: 0;
   background: #040817;
 }
 
