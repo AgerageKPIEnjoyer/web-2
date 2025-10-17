@@ -1,3 +1,4 @@
+/* ---------- Базові стилі (без змін) ---------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,79 +16,118 @@ html, body {
   word-break: break-word;
 }
 
-
-/* Головний контейнер: вибудовує header, контент та footer вертикально */
-.container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+.container { 
+  display: flex; 
+  flex-direction: 
+  column; min-height: 100vh; 
 }
 
-/* Контейнер для основного контенту: вибудовує бічну панель і правий контент горизонтально */
-.main-content {
-  display: flex;
-  flex-grow: 1; /* Займає весь доступний простір між header і footer */
+.main-content { 
+  display: flex; 
+  flex-grow: 1; 
 }
 
-/* Контейнер для правого контенту: вибудовує свої блоки вертикально */
 .right-content-area {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; /* Займає весь простір праворуч від бічної панелі */  
+   display: flex; 
+   flex-direction: column; 
+   flex-grow: 1; 
 }
 
-/* Контейнер для середнього ряду: вибудовує блоки 4 і 5 горизонтально */
-.middle-row {
-  display: flex;
-  flex-grow: 1; /* Займає весь простір між блоками 3 і 6 */
+/* Контейнер, що вибудовує центральну та праву колонки горизонтально */
+.bottom-row { 
+  display: flex; 
+  flex-grow: 1; 
 }
 
-.block1, .block7 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: #191d25;
+/*Контейнер, що вибудовує блоки 4 і 6 вертикально */
+.center-stack { 
+  display: flex; 
+  flex-direction: column; 
+  flex-basis: 82%; 
 }
 
-.block2 { /* Ліва бічна панель */
-  flex-basis: 250px;
-  flex-shrink: 0;
-  background: #222;
+.block1, .block7 { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 20px 40px; 
+  background: #191d25; 
 }
 
-.block3, .block6 { /* Верхній і нижній блоки в правому контенті */
-  background: #23272f;
-  min-height: 10%;
+.block2 { 
+  flex-basis: 250px; 
+  flex-shrink: 0; 
+  background: #222; 
 }
-.block6 { background: #0d042e; }
 
-.block4 { /* Ліва частина середнього ряду */
-  flex-basis: 80%;
+.block3 { 
+  background: #23272f; 
+}
+
+.block6 { 
+  background: #0d042e; 
+}
+
+.block4 { 
   background: #121629;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.block5 { /* Права частина середнього ряду */
-  flex-basis: 20%;
-  background: #040817;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-grow: 1; 
 }
 
-/* ---------- Стилі контенту (без змін) ---------- */
+.block5 { 
+  flex-basis: 18%; 
+  background: #040817; 
+}
+
 .blockX, .blockY {
-  display: inline-block; padding: 0.5rem 1rem; background: #312f38; color: #fff; font-weight: bold;
+  display: inline-block; 
+  padding: 0.5rem 1rem; 
+  background: #312f38;   
 }
+
 .block4 img {
-  display: block; max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px;
+  display: block; 
+  max-width: 100%; 
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 }
+
 .block p {
-  line-height: 2; font-size: 24px; font-weight: bold; text-align: center;
+  line-height: 2; 
+  font-size: 24px;
+  font-weight: bold; 
+  text-align: center;
+  color: #fff; 
+  font-weight: bold;
 }
+
 .block h3 {
-  font-size: 30px; font-weight: bold; margin-bottom: 20px; text-align: center;
+  font-size: 30px; 
+  font-weight: bold; 
+  margin-bottom: 20px; 
+  text-align: center;
+  color: #fff; 
+  font-weight: bold;
 }
-.block li { margin-bottom: 10px; font-size: 18px; font-weight: 200; }
-ul, ol { padding-left: 25px; text-align: left; }
-a { color: #216da0; text-decoration: none; }
-a:hover { text-decoration: underline; }
+
+.block li {
+  margin-bottom: 10px; 
+  font-size: 18px; 
+  font-weight: 200;
+}
+
+ul, ol {
+  padding-left: 25px; text-align: left;
+}
+
+a {
+  color: #216da0; 
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
