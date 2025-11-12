@@ -1,7 +1,7 @@
 :root {
-  --col-1: 250px;
-  --col-2: 700px;
-  --col-3: 250px;
+  --col-1: 20.83%;
+  --col-2: 58.33%;
+  --col-3: 20.83%;
   
   --row-1: 140px;   /* header */
   --row-2: 80px;   /* після header */
@@ -20,6 +20,7 @@ html, body {
 
 .layout-table {
   width: 100%;
+  min-width: 1024px; /*Мінімальна щирина, після досягнення якої сторінка просто не буде зменшуватися */
   min-height: 1100px;
   border-collapse: collapse;
   table-layout: fixed;   
@@ -45,8 +46,8 @@ html, body {
 /* Мінімальні висоти для кожного рядка */
 .row1 .block { min-height: var(--row-1); height: auto; }
 .row2 .block { min-height: var(--row-2); height: auto; }
-.row3 .block { min-height: var(--row-3); height: auto; }
-.row4 .block { min-height: var(--row-4); height: auto; }
+.row3 .block { min-height: var(--row-3); } 
+.row4 .block { height: var(--row-4); }       
 .row5 .block { min-height: var(--row-5); height: auto; }
 
 /* Усі блоки можуть рости, але не стиснутись нижче мінімуму */
